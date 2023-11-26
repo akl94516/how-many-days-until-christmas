@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "Originals is Out";
+    src: url('../fonts/originals_is_out/originals_is_out.ttf');
+    src: url('../fonts/originals_is_out/originals_is_out.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Owners Text";
+    src: url('../fonts/owners-text/owners-text-9.ttf');
+    src: url('../fonts/owners-text/owners-text-9.ttf') format('truetype');
+}
+
+/* This helps with having the page use all the space available in the viewport. It also prevents some weirdness when resizing the browser window. */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: "Owners Text", "PT Sans", Calibri, Tahoma, sans-serif;
+    /* This together with the main right below it make it so the main window fills the space available between the header and the column */
+    display: flex;
+    flex-direction: column;
+}
+
+/* This together with body makes it so the main window fills the space available between the header and the column */
+main {
+    flex: 1;
+}
+
+h1,
+h2 {
+    font-family: "hey-eloise", "Originals is Out", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.1px;
+}
+
+header {
+    display: inline-block;
+    color: #FFF242;
+    background-color: #5c81ff;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8em;
+    width: 100%;
+    min-width: 950px;
+}
+
+header img {
+    height: 110px;
+    float: left;
+    margin-top: 1%;
+}
+
+header h1 {
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+    line-height: normal;
+    font-size: 6em;
+    /* background-color: black; */
+}
+
+/* This prevents the header text from having an underline and changing color since they are clickable links. */
+#header a:link,
+#header a:visited {
+    text-decoration: none;
+    color: #FFF242;
+}
+
+#header a:hover {
+    filter: brightness(85%);
+}
+
+nav {
+    float: right;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    text-align: right;
+    /* background-color: black; */
+}
+
+/* This removes the bullets from the nav list */
+nav ul {
+    list-style-type: none;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+/* This makes all the banners appear centered withing the section and it also centers the text inside the banners */
+section {
+    text-align: center;
+    height: auto;
+}
+
+section article {
+    border: 1px solid black;
+    box-shadow: 8px 8px 8px #888888;
+}
+
+article.banner {
+    width: 600px;
+    height: 150px;
+    /* This does the margin between the banners, not the text */
+    margin: 2.2%;
+    background-size: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.banner h2 {
+    font-size: 4em;
+    color: #ffffff;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    margin-top: 3%;
+    margin-bottom: auto;
+}
+
+.banner h2:hover {
+    font-size: 5em;
+    margin-top: 1%;
+}
+
+.banner h3 {
+    font-size: 3em;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Add backgrounds to each of the banners. Also add an overlay to make text easier to read. */
+#bannerChristmas {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)), url("../images/xmax.png");
+}
+
+#bannerSummer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)), url("../images/summer.png");
+}
+
+#bannerEaster {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)), url("../images/easter.jpg");
+}
+
+#bannerThanksgiving {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)), url("../images/thanksgiving.jpg");
+}
+
+#bannerNewYears {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)), url("../images/new_years.jpg");
+}
+
+
+/* Single countdown page specific starts here */
+
+table {
+    background-color: #5c81ff;
+    /* top | left and right | bottom */
+    margin: 0px auto 50px;
+    /* top | left and right | bottom */
+    padding: 5px 300px 5px;
+}
+
+table h1 {
+    font-size: 3.5em;
+    font-weight: 500;
+    color: #FFF242;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 1pt;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table h2 {
+    font-size: 2em;
+    color: #000000;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    margin-top: -18px;
+    margin-bottom: 0px;
+}
+
+/* About us page specific starts here */
+
+#aboutusphoto {
+    display: flex;
+    justify-content: center;
+    /* top | left and right | bottom */
+    margin: 100px auto 30px;
+    max-width: 30%;
+    height: auto;
+}
+
+#aboutustext {
+    font-size: 1.6em;
+    text-align: justify;
+    /* top | left and right | bottom */
+    margin: 0 100px 0;
+
+}
+
+/* Contact us page specific starts here */
+
+#contactus_title {
+    font-family: "Owners Text", "PT Sans", Calibri, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 1%;
+    line-height: normal;
+    font-size: 2em;
+    /* background-color: black; */
+}
+
+form {
+    background-color: #5c82ffc0;
+    /* position: relative; */
+    margin: auto;
+    margin-top: 5%;
+    padding: 20px;
+    width: 1000px;
+    min-width: 1000px;
+    font-family: "Owners Text", "PT Sans", Calibri, Tahoma, sans-serif;
+    text-align: center;
+}
+
+label,
+input {
+    width: 200px;
+    display: inline-block;
+}
+
+label {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 1000px;
+    height: 250px;
+}
+
+footer {
+    background-color: #5c81ff;
+    color: white;
+    text-align: center;
+}

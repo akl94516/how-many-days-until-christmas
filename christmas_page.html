@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- comment -->
+<html lang="en">
+
+<head>
+	<meta name="keywords" content="holiday, countdown, christmas" />
+	<meta name="description" content="Simple holiday countdown timers" />
+	<meta charset="UTF-8" />
+	<!-- This links to my stylesheet -->
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<!-- This is an adobe web project. We get our fonts from here -->
+	<link rel="stylesheet" href="https://use.typekit.net/jwr4jhh.css">
+	<title>How Many Days Until...</title>
+</head>
+
+<body>
+	<!-- The nav bar is nested in the header -->
+	<header id="header">
+		<a href="index.html"><img src="images/logo.png" alt="hand-drawn calendar" />
+			<h1>How Many Days Until... </h1>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="#">
+						<h3>About us </h3>
+					</a></li>
+				<li><a href="contactus.html">
+						<h3>Contact us </h3>
+					</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- The main section has 2 main sections and includes 5 articles -->
+	<main>
+		<!-- This is the main counter in the page I want it to be centered and by itself -->
+		<section>
+			<a href="#">
+				<article id="bannerChristmas" class="banner">
+					<h2>Christmas</h2>
+					<h3 id="countdownChristmas">0d 00:00:00</h3>
+				</article>
+			</a>
+		</section>
+
+		<!-- This section contains the information table -->
+		<section>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<h1>Favorite Christmas Movie:</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>• Jingle Jangle A Christmas Journey</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h1>Favorite Christmas Food:</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>• Colombian Tamales / Venezuelan Hallacas</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h1>Favorite Christmas Activity:</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>• Watch Christmas movies with the fireplace on!</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h1>Eva's Favorite Thing About Christmas:</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>• When Santa comes and puts the presents under the tree</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h1>Isabelle's Favorite Thing About Christmas:</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>• Friday!</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+	<footer>
+		<p>Copyright &copy; All rights reserved by Anthony Lopez</p>
+		<p>Logo Image by rawpixel.com</p>
+	</footer>
+
+	<!-- This script takes care of generating the countdowns. I found on https://www.w3schools.com/howto/howto_js_countdown.asp I edited to make it into a function
+		so it could be reused for different dates. -->
+	<script src="scripts/countdown_single_page.js"></script>
+
+	<script>
+		window.addEventListener('load', function () {
+			generateCountdown("Dec 25, 2023 00:00:00", "countdownChristmas");
+		});
+	</script>
+
+</body>
+
+</html>
